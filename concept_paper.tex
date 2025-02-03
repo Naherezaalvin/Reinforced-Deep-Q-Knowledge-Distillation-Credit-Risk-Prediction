@@ -1,0 +1,77 @@
+\documentclass[8pt]{article}
+\usepackage{graphicx} % Required for inserting images
+
+
+
+\usepackage{setspace}
+\singlespacing
+\usepackage[top=4.0mm,paper=a4paper]{geometry}
+
+
+
+\usepackage{hyperref}
+
+
+
+\title{Reinforced Deep Q Knowledge Distillation For Credit Risk Prediction}
+\author{Nahereza Alvin and Mayanja Janet}
+\begin{document}
+
+\maketitle
+
+\section{Abstract}
+Traditional credit risk prediction models struggle to balance accuracy , interpretability and efficiency. They have a low precision to capture complex patterns in borrower behavior, necessitating a more advanced and robust approach.  The main objectives are to develop an efficient credit risk prediction model  with a closed-loop system where a teacher model, trained using Deep Q-Learning and a student model trained using Knowledge Distillation continuously improve each other as the teacher model gets feedback or reward from the student through Reinforcement Learning. This model is expected to capture complex patterns in borrower behavior, achieve a more accurate and reliable tool for credit risk assessment that enhances decision making so that financial institutions can reduce default rates and get a more stable and efficient financial ecosystem, benefiting both lenders and borrowers.
+\section{Keywords}
+The Keywords include; Credit Risk Prediction, Reinforcement Learning, Deep Q-Learning, Knowledge Distillation, Model compression.
+
+\section{Background and Introduction
+}
+\subsection{Technical Definitions}
+\subsection{Credit Risk Prediction}
+This is the process of assessing the likelihood of a borrower defaulting on a loan based on their financial history and payment behavior.This involves keenly looking through the financial details of individuals that are seeking to acquire a loan. The assessment is significant in such a way that it elaborates the borrowers potential to payback the loan in time depending on factors such as monthly income, loan repayment history and others.
+\subsection{Reinforcement Learning}
+ A machine learning technique where an agent learns to make decisions by interacting with an environment to maximize cumulative rewards. This method allows machine learning models to learn from their mistakes, what we would call past experiences for the case of humans. For a given state, the model is rewarded for each correct right action taken. If not rewarded, the model will learn that the action taken was not right.
+\subsection{Deep Q-Learning}
+A reinforcement learning method that combines Q-Learning and neural networks to approximate the Q-value function, which estimates the expected cumulative reward for each state-action pair. The Q-value which is stored in a Q-table represents how good an action is in a given state to maximize future rewards. The experiences of the agent are stored in a buffer and they include; state, action, reward and next state.These experiences are used to update the neural network's weights improving predictions.
+\subsection{Knowledge Distillation}
+A technique where a smaller and more efficient model(student) learns from a larger, more complex model(teacher). The teacher model is a complex model that is usually accurate but computationally expensive. In this case, a small student model is introduced since its easy to fit it on small portable devices like smartphones.The student not only learns the correct predictions but also the reasoning behind them using both soft and hard data labels.
+\subsection{Model Compression}
+Reducing on the model size and complexity while maintaining its performance. Compression is aimed at making the model more efficient to work in resource limited devices such as embedded systems. Some techniques used are pruning, quantization and knowledge distillation.
+\subsection{Current Research Trends}
+Deep learning has achieved notable success across various domains. Its ability to identify complex patterns in large-scale data and to manage millions of parameters has made it highly advantageous. However, deploying deep learning models presents a significant challenge due to their high computational demands. Knowledge distillation has emerged as a key technique for model compression and efficient knowledge transfer, enabling the deployment of deep learning models on resource-limited devices without compromising performance.
+Knowledge distillation has revolutionized model compression and knowledge transfer in machine learning [Amir Moslemi, Anna Briskina, Zubeka Dang, and Jason Li. A survey
+on knowledge distillation: Recent advancements. Machine Learning with
+Applications, 18:100605, 2024.]
+
+\section{Problem Statement
+}
+\subsection{Application Domain-Specific Problem}
+In the financial industry, accurate credit risk prediction is essential for minimizing loan defaults and maximizing profitability. Traditional models, such as logistic regression and decision trees, are limited in their ability to capture complex patterns in high-dimensional data for borrowers. There is a need to develop an efficient credit risk prediction model  with a closed-loop system where a teacher model, trained using Deep Q-Learning and a student model trained using Knowledge Distillation continuously improve each other as the teacher model gets feedback or reward from the student through Reinforcement Learning. 
+\subsection{Technical Computational Problem}
+This machine learning approach may face challenges such as; high-dimensional data as financial datasets always have very many features making it hard to train the model, Imbalanced dataset as loan defaulters are always very few compared to those who pay loans which makes it difficult to support both claims hence model bias, catastrophic forgetting due to the use of neural networks.
+\section{Proposed Solution}
+The proposed solution is a Reinforced Deep Q Knowledge Distillation credit risk prediction model which consists of teacher and student models. Teacher Model is trained as a Deep Q-Learning agent in a simulated environment to predict credit risk. Student Model learns from the teacher’s predictions through Knowledge Distillation. The environment simulates loan applications using features in the dataset. The teacher model also learns to approve or reject loans based on the reward from the student through reinforcement learning.
+This model is expected to capture complex patterns in borrower behavior and achieve a more accurate and reliable tool for credit risk assessment, benefiting both lenders and borrowers. To deal with the computational problem, Data cleaning will help reduce dimensionality in the data and the model will use Deep Q-Learning in case of catastrophic forgetting.
+\section{Dataset Description
+}
+
+The credit risk prediction dataset was obtained from github and it has 12 features and 150000 rows. Some of the features include; Monthly Income, Number of Credit Line and Loans, Number of Dependents. These dataset has relevant set of features that will avail the loan repayment patterns of borrowers thus enabling the assessment of credit risk in financial institutions. It also has enough data to train both the teacher model and student model using Knowledge Distillation methods.  
+The pre-processing steps of the dataset involve handling missing values by imputation using mean and dropping irrelevant features, feature engineering to create new features such as debt-to-income ratio, normalizing numerical features to a standard range, encoding categorical variables such as home ownership into numerical format.
+
+
+
+\cite{isakov2024cooperative}
+\cite{article}
+\cite{s25010191}
+\cite{unknown}
+\cite{MOSLEMI2024100605}
+\cite{wu2025data}
+\cite{rasti2024role}
+\cite{gupta2024addressing}
+\cite{JIANG2024101016}
+\bibliographystyle{plain}
+\bibliography{ref}
+[10]Mienye, E.; Jere, N.; Obaido, G.; Mienye, I.D.; Aruleba, K. Deep Learning in Finance: A Survey of Applications and Techniques. AI 2024, 5, 2066-2091.
+
+
+\end{document}
